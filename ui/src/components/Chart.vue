@@ -46,6 +46,6 @@ export default {
 
 <style>
 .small {
-  max-width: 600px;
+  width: 600px;
 }
 </style>

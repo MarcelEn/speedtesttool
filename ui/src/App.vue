@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <div @click="handleStartStop" id="button">
+    <div @click="handleStartStop" class="button">
       <h2>{{isRunning ? 'STOP' : 'START'}}</h2>
     </div>
-    <div @click="save" id="button">
+    <div id="right" @click="save" class="button">
       <h2>SAVE</h2>
     </div>
-    <Chart/>
+    <div id="chartwrapper">
+      <Chart/>
+    </div>
   </div>
 </template>
 
@@ -62,8 +64,11 @@ export default {
   top: 0;
   left: 0;
 }
-#button {
-  float: left;
+.button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 67.813px;
   width: 300px;
   text-align: center;
   color: gray;
@@ -72,8 +77,15 @@ export default {
   user-select: none;
 }
 
-#button:hover {
+.button:hover {
   color: white;
   background: black;
+}
+#right {
+  left: 300px !important;
+}
+#chartwrapper {
+  margin-top: 67.813px;
+  width: 100%;
 }
 </style>
